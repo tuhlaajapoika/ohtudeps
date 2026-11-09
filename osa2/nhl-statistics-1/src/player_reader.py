@@ -5,7 +5,7 @@ from player import Player
 
 class PlayerReader:
     def __init__(self, url: str):
-        # "https://studies.cs.helsinki.fi/nhlstats/2035-26/players.txt"
+        # "https://studies.cs.helsinki.fi/nhlstats/2025-26/players.txt"
         self._url = url
 
     def get_players(self):

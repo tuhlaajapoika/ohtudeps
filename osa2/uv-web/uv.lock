@@ -78,11 +78,11 @@ wheels = [
 
 [[package]]
 name = "jsonpickle"
-version = "4.1.4"
+version = "2.2.0"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/c2/37/95fb728a57b0b17864041daea006bbedd9765e8030755e4ca84ba20ae137/jsonpickle-4.1.4.tar.gz", hash = "sha256:8adf24cca611809b55ff5ed2ace850e1a3e4370dad5d363df71569b8f46c9645", size = 317936, upload-time = "2026-10-15T15:16:53.184Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/65/09/50bc3aabaeba15b319737560b41f3b6acddf6f10011b9869c796683886aa/jsonpickle-2.2.0.tar.gz", hash = "sha256:7b272918b0554182e53dc340ddd62d9b7f902fec7e7b05620c04f3ccef479a0e", size = 189866, upload-time = "2022-05-11T16:03:34.307Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/c9/25/7fc775e2c25d5484a1333bb2d3d59adf024438dee1ff416675293fb6ea75/jsonpickle-4.1.4-py3-none-any.whl", hash = "sha256:c46024ba4acd8adb9a8b8485d074e141cbfacafe334c2aa982e5b32efabc2f0e", size = 47763, upload-time = "2026-10-15T15:16:51.794Z" },
+    { url = "https://files.pythonhosted.org/packages/c6/85/b4920d8087ef480eed4e7b6b0d46c90674e923e59b22e7929fd17aba5030/jsonpickle-2.2.0-py2.py3-none-any.whl", hash = "sha256:de7f2613818aa4f234138ca11243d6359ff83ae528b2185efdd474f62bcf9ae1", size = 39324, upload-time = "2022-05-11T16:03:32.577Z" },
 ]
 
 [[package]]
@@ -223,7 +223,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "flask", specifier = ">=3.1.3" },
-    { name = "jsonpickle", specifier = ">=4.1.4" },
+    { name = "jsonpickle", specifier = "==2.2.0" },
 ]
 
 [package.metadata.requires-dev]

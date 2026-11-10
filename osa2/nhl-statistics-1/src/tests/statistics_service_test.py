@@ -1,4 +1,3 @@
-from typing import assert_type
 import unittest
 
 from player import Player

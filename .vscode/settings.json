@@ -1,0 +1,3 @@
+{
+    "python-envs.defaultEnvManager": ".venv/bin/python3",
+}

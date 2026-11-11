@@ -36,11 +36,8 @@ class ProjectReader:
             )
 
             # lisää python projektin riippuvuudeksi, jos määritelty
-            try:
-                if t_proj["requires-python"]:
-                    t_proj_deps.insert(0, "python")
-            except KeyError:
-                pass  # jatka nostamatta poikkeusta
+            if t_proj.get("requires-python"):
+                t_proj_deps.insert(0, "python")
 
             return Project(
                 name=t_proj["name"],

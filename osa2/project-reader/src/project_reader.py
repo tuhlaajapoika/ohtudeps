@@ -27,6 +27,7 @@ class ProjectReader:
         try:
             toml_data = tomllib.loads(content)
             t_proj = toml_data["project"]
+            t_authors = [a["name"] for a in t_proj["authors"]]
 
             # parsi versionumerot
             t_proj_deps = _strip_deps_versions(t_proj["dependencies"])
@@ -34,11 +35,20 @@ class ProjectReader:
                 toml_data["dependency-groups"]["dev"]
             )
 
+            # lisää python projektin riippuvuudeksi, jos määritelty
+            try:
+                if t_proj["requires-python"]:
+                    t_proj_deps.insert(0, "python")
+            except KeyError:
+                pass  # jatka nostamatta poikkeusta
+
             return Project(
-                t_proj["name"],
-                t_proj["description"],
-                t_proj_deps,
-                t_dev_deps
+                name=t_proj["name"],
+                authors=t_authors,
+                project_license=t_proj["license"],
+                description=t_proj["description"],
+                dependencies=t_proj_deps,
+                dev_dependencies=t_dev_deps
             )
         except KeyError as e:
             raise KeyError(f"Error parsing TOML: {e}") from e
